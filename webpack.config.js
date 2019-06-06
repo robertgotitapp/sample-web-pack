@@ -28,17 +28,18 @@ module.exports = {
       //     path.resolve(__dirname, 'public')
       //   ],
       //   options: {
-      //     name: 'static/media/[name].[hash:8].[ext]',
+      //     name: 'static/img/[name].[ext]',
       //   }
       // },
       {
         test: /\.(jpe?g)|(png)$/,
         loader: [
           {
-            'loader': 'url-loader',
+            'loader': 'file-loader',
             'options': {
-              'limit': 8192
-            }
+              'limit': 8192,
+              'name': 'static/img/[name].[hash:8].[ext]'
+            },
           }
         ],
         include: [
