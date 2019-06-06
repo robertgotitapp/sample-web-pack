@@ -28,6 +28,7 @@ module.exports = {
       //     path.resolve(__dirname, 'public')
       //   ],
       //   options: {
+      //     'limit': 8192,
       //     name: 'static/img/[name].[ext]',
       //   }
       // },
@@ -46,6 +47,18 @@ module.exports = {
           path.resolve(__dirname, 'src'),
           path.resolve(__dirname, 'public')
         ]
+      },
+      {
+        test: /\.jsx?$/,
+        use: [
+          // {
+          //   loader: 'babel-loader'
+          // },
+          {
+            'loader': 'my-loader-2',
+          }
+        ],
+        exclude: path.resolve(__dirname, 'node_modules')
       },
       {
         test: /\.html$/,

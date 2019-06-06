@@ -19,7 +19,6 @@ module.exports = function(content) {
     })
     
     let outputPath = processString(url)
-    console.log(`Step 1: ${outputPath}`)
 
     if (options.outputPath) {
         if (typeof options.outputPath === 'function') {
@@ -30,7 +29,6 @@ module.exports = function(content) {
       }
 
     let publicPath = `__webpack_public_path__ + ${JSON.stringify(outputPath)}`;
-    console.log(`Step 2: ${publicPath}`)
 
     if (options.publicPath) {
 
@@ -46,7 +44,6 @@ module.exports = function(content) {
 
         publicPath = JSON.stringify(publicPath)
     }
-    console.log(`Step 3: ${publicPath}`)
 
     if (typeof options.emitFile === 'undefined' || options.emitFile) {
         this.emitFile(outputPath, content);

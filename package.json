@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "file-loader": "^4.0.0",
+    "image-webpack-loader": "^5.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "schema-utils": "^1.0.0",
