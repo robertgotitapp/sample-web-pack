@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Input from "../presentational/Input.jsx";
-import image from "./image.jpeg"
+import image from "../../../img/image.jpeg"
+import image2 from "../../../img/image2.png"
 
 class FormContainer extends Component {
   constructor() {
@@ -19,6 +20,7 @@ class FormContainer extends Component {
     return (
       <p>
         <img src={image} className="App-logo" alt="logo" />
+        <img src={image2} className="App-logo" alt="logo" />
         <form id="article-form">
           <Input
             text="SEO title"

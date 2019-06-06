@@ -1,5 +1,5 @@
-import loaderUtils from 'loader-utils'
-import path from 'path'
+const loaderUtils = require('loader-utils')
+const path = require('path')
 
 
 module.exports = function(content) {
