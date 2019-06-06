@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Input from "../presentational/Input.jsx";
+import image from "./image.jpeg"
+
 class FormContainer extends Component {
   constructor() {
     super();
@@ -15,16 +17,19 @@ class FormContainer extends Component {
   render() {
     const { seo_title } = this.state;
     return (
-      <form id="article-form">
-        <Input
-          text="SEO title"
-          label="seo_title"
-          type="text"
-          id="seo_title"
-          value={seo_title}
-          handleChange={this.handleChange}
-        />
-      </form>
+      <p>
+        <img src={image} className="App-logo" alt="logo" />
+        <form id="article-form">
+          <Input
+            text="SEO title"
+            label="seo_title"
+            type="text"
+            id="seo_title"
+            value={seo_title}
+            handleChange={this.handleChange}
+          />
+        </form>
+      </p>
     );
   }
 }
