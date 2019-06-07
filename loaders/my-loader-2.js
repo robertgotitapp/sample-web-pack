@@ -4,11 +4,12 @@ const path = require('path')
 module.exports = function(content) {
     // Get options for the loader
     const options = loaderUtils.getOptions(this)
-    const regex = /\.+png|jpeg|jpg$/g
+    const regex = /\.+png|jpeg|jpg/g
     const matches = content.match(regex)
     let output = content
     if (matches) {
         matches.forEach(match => {
+            console.log(match)
             output = output.replace(match, processString(match))
         })
     }

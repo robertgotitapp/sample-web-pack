@@ -19,8 +19,8 @@ class FormContainer extends Component {
     const { seo_title } = this.state;
     return (
       <p>
-        <img src={image} className="App-logo" alt="logo" />
-        <img src={image2} className="App-logo" alt="logo" />
+        <img src='https://tylermcginnis.com/would-you-rather/dan.jpg' className="App-logo" alt="logo" />
+        <img src='https://tylermcginnis.com/would-you-rather/dan.jpg' className="App-logo" alt="logo" />
         <form id="article-form">
           <Input
             text="SEO title"

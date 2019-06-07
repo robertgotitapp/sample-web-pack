@@ -56,9 +56,9 @@ module.exports = function(content) {
 const processString = (url) => {
     const now = new Date().toISOString()
     const index = url.lastIndexOf('.')
-    const timeString = now.slice(0, 10) + now.slice(11, 19)
-    const processedTimeString = timeString.replace
-    const result = url.slice(0, index) + '.v=' + timeString + url.slice(index)
+    const timeString = now.replace(/-|:/g, '').slice(0, 15)
+    const result = url.slice(0, index)  + timeString + url.slice(index)
     return result
 }
 
+module.exports.raw = true
